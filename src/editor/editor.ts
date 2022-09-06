@@ -10,19 +10,22 @@ import themes from '../themes/themes'
 import { cursors } from '../themes/cursors'
 import { selection } from '../selection/selection'
 
-//call selection function for inserting dropdown selections to DOM  
+//call selection function for inserting dropdown selections to the DOM  
 selection();
 
+//editor function
 function editor() {
     const app = document.querySelector('#app') as HTMLElement;
 
+    //editor div
     const editorDiv = `<div id="editor"></div>`;
-
     app.insertAdjacentHTML('beforeend', editorDiv);
 
+    //create compartments
     const themeConfig = new Compartment();
     const cursorConfig = new Compartment();
 
+    //editor state
     const editorState = EditorState.create({
         extensions: [
             markdown({
@@ -47,14 +50,15 @@ function editor() {
         ],
     });
 
+    //editor view 
     const editorView = new EditorView({
         state: editorState,
         doc: '',
         parent: document.querySelector('#editor') as HTMLElement,
     });
 
+    //theme list
     const themeList = document.querySelector('#theme-list') as HTMLElement;
-
     if(themeList) {
         for(let i = 0; i < themes.length; i++) {
             const selectOption = document.createElement('option') as HTMLOptionElement;
@@ -74,8 +78,8 @@ function editor() {
         });
     }
 
+    //cursor list
     const cursorList = document.querySelector('#cursor-list') as HTMLElement;
-
     if(cursorList) {
         for(let j = 0; j < cursors.length; j++) {
             const selectOption = document.createElement('option') as HTMLOptionElement;

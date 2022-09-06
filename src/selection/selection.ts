@@ -1,5 +1,6 @@
 import '../styles/selection.css'
 
+//export selection options
 export function selection() {
     const selectionDivs = `
     <div id="theme-selection">
