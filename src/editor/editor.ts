@@ -59,7 +59,7 @@ export function editor() {
             ]),
             themeConfig.of([themes[0]]),
             cursorConfig.of([cursors[0]]),
-            //listener for update 
+            //listener for preview update 
             EditorView.updateListener.of((event) => {
                 setTimeout(updatePreview, 0);
                 previewDelay = window.setTimeout(updatePreview, 0);
