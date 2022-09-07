@@ -28,11 +28,11 @@ const blockCursorMod: Extension = [
 //export cursors
 export const cursors = [
     {
+        extension: blockCursorMod,
+        cursor: 'Block Cursor'
+    },
+    {
         extension: defaultCursorMod,
         cursor: 'Default Cursor'
     },
-    {
-        extension: blockCursorMod,
-        cursor: 'Block Cursor'
-    }
 ];

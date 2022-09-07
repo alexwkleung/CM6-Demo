@@ -1,9 +1,10 @@
 import '../styles/editor.css'
 import '../styles/preview.css'
 import '../styles/selection.css'
+import '../styles/highlightjs/gigavolt.min.css'
 import { Compartment, EditorState } from '@codemirror/state'
 import { EditorView, keymap, rectangularSelection, drawSelection, highlightActiveLine, lineNumbers } from '@codemirror/view'
-import { autocompletion, closeBrackets } from '@codemirror/autocomplete'
+import { closeBrackets } from '@codemirror/autocomplete'
 import { defaultKeymap, indentWithTab, history, historyKeymap } from '@codemirror/commands'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { languages } from '@codemirror/language-data'
@@ -13,8 +14,10 @@ import { cursors } from '../themes/cursors'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeSanitize from 'rehype-sanitize'
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
+import rehypeHighlight from 'rehype-highlight'
+import remarkGfm from 'remark-gfm'
 
 //editor function
 export function editor() {
@@ -47,7 +50,6 @@ export function editor() {
             highlightActiveLine(),
             lineNumbers(),
             history(),
-            autocompletion(),
             closeBrackets(),
             bracketMatching(),
             keymap.of([
@@ -77,7 +79,18 @@ export function editor() {
         const markdownParser = await unified()
         .use(remarkParse)
         .use(remarkRehype)
-        .use(rehypeSanitize)
+        .use(remarkGfm)
+        .use(rehypeSanitize, {
+            ...defaultSchema,
+            attributes: {
+                ...defaultSchema.attributes,
+                code: [
+                    ...(defaultSchema.attributes!.code || []),
+                    ['className', 'language-cpp', 'language-js', 'language-ts', 'language-jsx', 'language-tsx', 'language-bash', 'language-md', 'language-markdown', 'language-shell', 'language-make', 'language-text', 'language-txt', 'language-html', 'language-css']
+                ]
+            }
+        })
+        .use(rehypeHighlight, {subset: false})
         .use(rehypeStringify)
         .process(editorView.state.doc.toString());
 

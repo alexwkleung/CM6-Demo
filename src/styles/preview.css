@@ -1,6 +1,6 @@
 #preview {
     all: revert;
-    background-color: #595959;
+    background-color: rgb(60, 60, 60);
     width: 49.9%;
     height: 100vh;
     margin-left: 50%;
@@ -33,27 +33,27 @@
 }
 
 p {
-    color: #BDBDBD;
+    color: #e6e4e4;
     font-size: 17px;
     font-family: 'Inter-Regular', sans-serif;
 }
 
 a {
-	color: #5C6BC0;
+	color: #6e7dd6;
 	text-decoration: none;
     font-family: 'Inter-Regular', sans-serif;
 }
 
 span { 
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 pre code {
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 pre { 
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 mark {
@@ -68,7 +68,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #BDBDBD; 
+    color: #e6e4e4;
     font-family: 'Inter-Bold', sans-serif;
     /* text-decoration: underline; */
     border-bottom: 1px solid;
@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     font-family: 'Inter-Regular', sans-serif;
     font-size: 17px;
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 ol {
     font-family: 'Inter-Regular', sans-serif;
-    color: #BDBDBD;
+    color: #e6e4e4;
     font-size: 17px;
 }
 
@@ -92,7 +92,7 @@ details, summary {
 }
 
 blockquote  {
-    border-left: 3px solid #BDBDBD;
+    border-left: 3px solid #e6e4e4;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     margin-left: 1.5em;
@@ -101,7 +101,7 @@ blockquote  {
 }
 
 blockquote:before {
-    color: #BDBDBD;
+    color: #e6e4e4;
     font-size: 4em;
     line-height: 0.1em;
     margin-right: 0.25em;
@@ -118,7 +118,7 @@ table, th, td {
     border: 1px solid;
     border-collapse: collapse;
     font-size: 17px;
-    color: #BDBDBD;
+    color: #e6e4e4;
     font-family: 'Inter-Regular', sans-serif;
     padding: 6px 13px;
 }
@@ -136,7 +136,7 @@ details summary {
     height: auto;
     border-style: solid;
     border-color:rgb(71, 71, 71);
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 details p { 
@@ -146,7 +146,7 @@ details p {
     margin: auto;
     border-style: solid;
     border-color:rgb(71, 71, 71);
-    color: #BDBDBD;
+    color: #e6e4e4;
 }
 
 details summary > * {
