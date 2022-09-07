@@ -86,7 +86,23 @@ export function editor() {
                 ...defaultSchema.attributes,
                 code: [
                     ...(defaultSchema.attributes!.code || []),
-                    ['className', 'language-cpp', 'language-js', 'language-ts', 'language-jsx', 'language-tsx', 'language-bash', 'language-md', 'language-markdown', 'language-shell', 'language-make', 'language-text', 'language-txt', 'language-html', 'language-css']
+                    [
+                        'className', 
+                        'language-cpp', 
+                        'language-js', 
+                        'language-ts',
+                        'language-jsx', 
+                        'language-tsx', 
+                        'language-bash', 
+                        'language-md', 
+                        'language-markdown', 
+                        'language-shell', 
+                        'language-make', 
+                        'language-text', 
+                        'language-txt', 
+                        'language-html', 
+                        'language-css'
+                    ]
                 ]
             }
         })
