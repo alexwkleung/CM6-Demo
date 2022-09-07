@@ -1,5 +1,6 @@
 import '../styles/editor.css'
 import '../styles/preview.css'
+import '../styles/selection.css'
 import { Compartment, EditorState } from '@codemirror/state'
 import { EditorView, keymap, rectangularSelection, drawSelection, highlightActiveLine, lineNumbers } from '@codemirror/view'
 import { autocompletion, closeBrackets } from '@codemirror/autocomplete'

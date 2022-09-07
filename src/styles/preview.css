@@ -1,11 +1,154 @@
 #preview {
     all: revert;
-    background-color: #cacbcd;
-    width: 49%;
+    background-color: #595959;
+    width: 49.9%;
     height: 100vh;
     margin-left: 50%;
     position: absolute;
     overflow-x: scroll;
     overflow-y: scroll;
     padding-left: 10px;
+}
+
+/* 
+* repo: https://github.com/alexwkleung/Markdown-CSS
+*
+* this can be modified to your liking, and is encouraged.
+*
+* you should be aware that copying this into your project can
+* result in conflicting styles that override each other. make sure
+* to compare them before submitting an issue.
+*
+* NOTE: the styles may look a bit off since they haven't been thoroughly tested.
+*/
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('./fonts/Inter-Bold.ttf');
+}
+
+p {
+    color: #BDBDBD;
+    font-size: 17px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+a {
+	color: #5C6BC0;
+	text-decoration: none;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+span { 
+    color: #BDBDBD;
+}
+
+pre code {
+    color: #BDBDBD;
+}
+
+pre { 
+    color: #BDBDBD;
+}
+
+mark {
+    background-color: #455A64;
+    color: #BDBDBD;
+}
+
+img { 
+    max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #BDBDBD; 
+    font-family: 'Inter-Bold', sans-serif;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid;
+}
+
+ul {
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 17px;
+    color: #BDBDBD;
+}
+
+ol {
+    font-family: 'Inter-Regular', sans-serif;
+    color: #BDBDBD;
+    font-size: 17px;
+}
+
+details, summary {
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 17px;
+}
+
+blockquote  {
+    border-left: 3px solid #BDBDBD;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    margin-left: 1.5em;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 17px;
+}
+
+blockquote:before {
+    color: #BDBDBD;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 17px;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    font-size: 17px;
+    color: #BDBDBD;
+    font-family: 'Inter-Regular', sans-serif;
+    padding: 6px 13px;
+}
+
+strong {
+    color: #E0E0E0;
+    font-size: 17.5px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+details summary {
+    cursor: pointer;
+    border-width: 1px;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-color:rgb(71, 71, 71);
+    color: #BDBDBD;
+}
+
+details p { 
+    border-width: 1px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    border-style: solid;
+    border-color:rgb(71, 71, 71);
+    color: #BDBDBD;
+}
+
+details summary > * {
+    display: inline;
 }
