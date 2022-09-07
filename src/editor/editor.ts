@@ -106,7 +106,7 @@ export function editor() {
                 ]
             }
         })
-        .use(rehypeHighlight, {subset: false})
+        .use(rehypeHighlight, { subset: false })
         .use(rehypeStringify)
         .process(editorView.state.doc.toString());
 
