@@ -1,0 +1,11 @@
+#preview {
+    all: revert;
+    background-color: #cacbcd;
+    width: 49%;
+    height: 100vh;
+    margin-left: 50%;
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding-left: 10px;
+}

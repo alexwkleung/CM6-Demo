@@ -1,3 +1,71 @@
-.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4 {
+#editor {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼo.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ1o.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼ2p.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ3o.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ4n.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ5o.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼ6p.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ7o.ͼ8n {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼo.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ1o.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼ2p.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ3o.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ4n.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ5o.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ2.ͼ4.ͼ6p.ͼ8o {
+    outline: none;
+}
+
+.cm-editor.cm-focused.ͼ1.ͼ3.ͼ4.ͼ7o.ͼ8o {
     outline: none;
 }

@@ -1,4 +1,5 @@
 import '../styles/editor.css'
+import '../styles/preview.css'
 import { Compartment, EditorState } from '@codemirror/state'
 import { EditorView, keymap, rectangularSelection, drawSelection, highlightActiveLine, lineNumbers } from '@codemirror/view'
 import { autocompletion, closeBrackets } from '@codemirror/autocomplete'
@@ -8,17 +9,17 @@ import { languages } from '@codemirror/language-data'
 import { bracketMatching } from '@codemirror/language'
 import themes from '../themes/themes'
 import { cursors } from '../themes/cursors'
-import { selection } from '../selection/selection'
-
-//call selection function for inserting dropdown selections to the DOM  
-selection();
 
 //editor function
-function editor() {
+export function editor() {
     const app = document.querySelector('#app') as HTMLElement;
 
     //editor div
-    const editorDiv = `<div id="editor"></div>`;
+    const editorDiv = `
+    <div id="preview"></div>
+    <div id="editor"></div>
+    `;
+    
     app.insertAdjacentHTML('beforeend', editorDiv);
 
     //create compartments
@@ -67,7 +68,7 @@ function editor() {
             themeList.appendChild(selectOption);
         }
 
-        themeList.addEventListener('change', (e) => {
+        themeList.addEventListener('change', (e): void => {
             if(e.currentTarget instanceof HTMLSelectElement) {
                 const num = Number(e.currentTarget.value);
 
@@ -88,7 +89,7 @@ function editor() {
             cursorList.appendChild(selectOption);
         }
 
-        cursorList.addEventListener('change', (e) => {
+        cursorList.addEventListener('change', (e): void => {
             if(e.currentTarget instanceof HTMLSelectElement) {
                 const num = Number(e.currentTarget.value);
 
@@ -99,4 +100,3 @@ function editor() {
         });
     }
 };
-editor();
