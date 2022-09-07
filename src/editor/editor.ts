@@ -9,6 +9,11 @@ import { languages } from '@codemirror/language-data'
 import { bracketMatching } from '@codemirror/language'
 import themes from '../themes/themes'
 import { cursors } from '../themes/cursors'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
 
 //editor function
 export function editor() {
@@ -19,12 +24,15 @@ export function editor() {
     <div id="preview"></div>
     <div id="editor"></div>
     `;
-    
+
     app.insertAdjacentHTML('beforeend', editorDiv);
 
     //create compartments
     const themeConfig = new Compartment();
     const cursorConfig = new Compartment();
+
+    //preview delay
+    let previewDelay: number; 
 
     //editor state
     const editorState = EditorState.create({
@@ -48,6 +56,11 @@ export function editor() {
             ]),
             themeConfig.of([themes[0]]),
             cursorConfig.of([cursors[0]]),
+            //listener for update 
+            EditorView.updateListener.of((event) => {
+                setTimeout(updatePreview, 0);
+                previewDelay = window.setTimeout(updatePreview, 0);
+            })
         ],
     });
 
@@ -57,6 +70,18 @@ export function editor() {
         doc: '',
         parent: document.querySelector('#editor') as HTMLElement,
     });
+
+    //update preview window
+    async function updatePreview() {
+        const markdownParser = await unified()
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypeSanitize)
+        .use(rehypeStringify)
+        .process(editorView.state.doc.toString());
+
+        (document.querySelector('#preview') as HTMLElement).innerHTML = String(markdownParser);
+    }
 
     //theme list
     const themeList = document.querySelector('#theme-list') as HTMLElement;
