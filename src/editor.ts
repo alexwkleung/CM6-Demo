@@ -18,6 +18,7 @@ import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
 import rehypeHighlight from 'rehype-highlight'
 import remarkGfm from 'remark-gfm'
+import remarkEmoji from 'remark-emoji'
 
 //editor function
 export function editor() {
@@ -80,6 +81,7 @@ export function editor() {
         .use(remarkParse)
         .use(remarkRehype)
         .use(remarkGfm)
+        .use(remarkEmoji, {emoticon: true})
         .use(rehypeSanitize, {
             ...defaultSchema,
             attributes: {
