@@ -1,4 +1,4 @@
-import '../styles/main.css'
+import './styles/main.css'
 import { selection } from './selection'
 import { editor } from './editor'
 

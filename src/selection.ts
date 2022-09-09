@@ -1,4 +1,4 @@
-import '../styles/selection.css'
+import './styles/selection.css'
 
 //export selection options
 export function selection() {
