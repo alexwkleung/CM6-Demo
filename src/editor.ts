@@ -81,7 +81,7 @@ export function editor() {
         .use(remarkParse)
         .use(remarkRehype)
         .use(remarkGfm)
-        .use(remarkEmoji, {emoticon: true})
+        .use(remarkEmoji, { emoticon: true })
         .use(rehypeSanitize, {
             ...defaultSchema,
             attributes: {
