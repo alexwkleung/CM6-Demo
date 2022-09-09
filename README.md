@@ -4,4 +4,4 @@ Yet again, I created another CodeMirror 6 demo. It uses craftzdog's [cm6-themes]
 
 Written in TypeScript. Used Remark/Unified for Markdown parsing.
 
-Try out the demo [here]().
+You can try out the demo [here](https://cm6-demo.vercel.app/).
