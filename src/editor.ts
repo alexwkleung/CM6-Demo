@@ -103,7 +103,21 @@ export function editor() {
                         'language-text', 
                         'language-txt', 
                         'language-html', 
-                        'language-css'
+                        'language-css',
+                        'hljs language-cpp', 
+                        'hljs language-js', 
+                        'hljs language-ts',
+                        'hljs language-jsx', 
+                        'hljs language-tsx', 
+                        'hljs language-bash', 
+                        'hljs language-md', 
+                        'hljs language-markdown', 
+                        'hljs language-shell', 
+                        'hljs language-make', 
+                        'hljs language-text', 
+                        'hljs language-txt', 
+                        'hljs language-html', 
+                        'hljs language-css'
                     ]
                 ]
             }
