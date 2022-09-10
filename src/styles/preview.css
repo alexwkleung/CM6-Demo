@@ -44,18 +44,6 @@ a {
     font-family: 'Inter-Regular', sans-serif;
 }
 
-span { 
-    color: #e6e4e4;
-}
-
-pre code {
-    color: #e6e4e4;
-}
-
-pre { 
-    color: #e6e4e4;
-}
-
 mark {
     background-color: #455A64;
     color: #BDBDBD;
